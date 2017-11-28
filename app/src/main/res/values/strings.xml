@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TuPOC</string>
+    <string name="back"></string>
+    <string name="settings"></string>
+    <string name="TASKS"></string>
+    <string name="WEATHER"></string>
+    <string name="CALENDER"></string>
+    <string-array name="sort">
+        <item>time</item>
+        <item>priority</item>
+        <item>alphabetic</item>
+    </string-array>
+</resources>
