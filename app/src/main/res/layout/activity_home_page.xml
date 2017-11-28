@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context="com.example.hunter.tupoc.homePage">
+
+    <Button
+        android:id="@+id/weatherButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:text="WEATHER"
+        app:layout_constraintEnd_toStartOf="@+id/settingsButton"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_preferences" />
+
+    <ListView
+        android:id="@+id/taskListView"
+        android:layout_width="0dp"
+        android:layout_height="327dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherButton" />
+
+    <Button
+        android:id="@+id/wedButton"
+        android:layout_width="53dp"
+        android:layout_height="61dp"
+        android:background="@color/colorPrimary"
+        android:text="SUN"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/thursButton"
+        app:layout_constraintEnd_toStartOf="@+id/thursButton" />
+
+    <TextView
+        android:id="@+id/tuesView"
+        android:layout_width="53dp"
+        android:layout_height="31dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:hapticFeedbackEnabled="false"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tuesButton"
+        app:layout_constraintEnd_toEndOf="@+id/tuesButton" />
+
+    <Button
+        android:id="@+id/tuesButton"
+        android:layout_width="53dp"
+        android:layout_height="61dp"
+        android:background="@color/colorPrimary"
+        android:text="SUN"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/wedButton"
+        app:layout_constraintEnd_toStartOf="@+id/wedButton" />
+
+    <TextView
+        android:id="@+id/sunView"
+        android:layout_width="53dp"
+        android:layout_height="31dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:hapticFeedbackEnabled="false"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sunButton"
+        app:layout_constraintStart_toStartOf="@+id/sunButton" />
+
+    <Button
+        android:id="@+id/thursButton"
+        android:layout_width="53dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="33dp"
+        android:background="@color/colorPrimary"
+        android:text="SUN"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskListView" />
+
+    <TextView
+        android:id="@+id/wedView"
+        android:layout_width="53dp"
+        android:layout_height="31dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:hapticFeedbackEnabled="false"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/wedButton"
+        app:layout_constraintEnd_toStartOf="@+id/thursButton" />
+
+    <Button
+        android:id="@+id/satButton"
+        android:layout_width="53dp"
+        android:layout_height="61dp"
+        android:background="@color/colorPrimary"
+        android:text="SUN"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/friButton"
+        app:layout_constraintStart_toEndOf="@+id/friButton" />
+
+    <TextView
+        android:id="@+id/friView"
+        android:layout_width="53dp"
+        android:layout_height="31dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:hapticFeedbackEnabled="false"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/friButton"
+        app:layout_constraintStart_toStartOf="@+id/friButton" />
+
+    <Button
+        android:id="@+id/friButton"
+        android:layout_width="53dp"
+        android:layout_height="61dp"
+        android:background="@color/colorPrimary"
+        android:text="SUN"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/thursButton"
+        app:layout_constraintStart_toEndOf="@+id/thursButton" />
+
+    <TextView
+        android:id="@+id/thursView"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:hapticFeedbackEnabled="false"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/thursButton"
+        app:layout_constraintEnd_toEndOf="@+id/thursButton"
+        app:layout_constraintStart_toStartOf="@+id/thursButton" />
+
+    <Button
+        android:id="@+id/sunButton"
+        android:layout_width="53dp"
+        android:layout_height="61dp"
+        android:background="@color/colorPrimary"
+        android:text="SUN"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/satButton"
+        app:layout_constraintStart_toEndOf="@+id/satButton" />
+
+    <Button
+        android:id="@+id/monButton"
+        android:layout_width="53dp"
+        android:layout_height="61dp"
+        android:background="@color/colorPrimary"
+        android:text="SUN"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tuesButton"
+        app:layout_constraintEnd_toStartOf="@+id/tuesButton" />
+
+    <TextView
+        android:id="@+id/monView"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:hapticFeedbackEnabled="false"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/monButton"
+        app:layout_constraintEnd_toEndOf="@+id/monButton"
+        app:layout_constraintStart_toStartOf="@+id/monButton" />
+
+    <TextView
+        android:id="@+id/satView"
+        android:layout_width="53dp"
+        android:layout_height="31dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:hapticFeedbackEnabled="false"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/satButton"
+        app:layout_constraintStart_toStartOf="@+id/satButton" />
+
+</android.support.constraint.ConstraintLayout>
