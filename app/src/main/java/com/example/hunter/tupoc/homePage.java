@@ -22,7 +22,7 @@ public class homePage extends AppCompatActivity {
 
 
     // weatherOn , calendarOn , taskOn , light, moderate , busy
-    ArrayList<Integer> settings;
+    ArrayList<Integer> settings = new ArrayList<>(Arrays.asList(1,1,1,3,5,7));
     ArrayList<Task> tasks;
     ArrayList<Button> calendarButtons;
     ArrayList<Button> buttons;
@@ -51,29 +51,29 @@ public class homePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
 
-        /*
+
+
              try {
             settings = getSettings(settingsFilePath);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        weatherOn = settings.get(0);
-        calendarOn = settings.get(1);
-        tasksOn = settings.get(2);
-        light = settings.get(3);
-        moderate = settings.get(4);
-        busy = settings.get(5);
+            weatherOn = settings.get(0);
+            calendarOn = settings.get(1);
+            tasksOn = settings.get(2);
+            light = settings.get(3);
+            moderate = settings.get(4);
+            busy = settings.get(5);
 
 
-        /*
-         * Set up all buttons and map their click events to their respective activities
-         */
+
 
 
         final Button weatherButton = findViewById(R.id.weatherButton);
         weatherButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                setContentView(R.layout.activity_calendar);
+                Intent intent = new Intent(v.getContext(), Weather.class);
+                startActivity(intent);
             }
         });
 
@@ -87,7 +87,7 @@ public class homePage extends AppCompatActivity {
 
 
         /*
-         * Inits and puts calendar buttons into an array list for easy click event mapping
+         * Inits calendar buttons
          */
 
         final Button monButton = findViewById(R.id.monButton);
@@ -97,9 +97,11 @@ public class homePage extends AppCompatActivity {
         final Button friButton = findViewById(R.id.friButton);
         final Button satButton = findViewById(R.id.satButton);
         final Button sunButton = findViewById(R.id.sunButton);
+        //creates calendar button array list for easy referencing
         calendarButtons = new ArrayList<>(Arrays.asList(monButton,tuesButton,wedButton,thursButton,friButton,satButton,sunButton));
         for(Button b:calendarButtons)
         {
+
             b.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent intent = new Intent(v.getContext(), Calendar.class);
@@ -112,9 +114,8 @@ public class homePage extends AppCompatActivity {
 
 
         /*
-         * Sets up all text views
+         * Inits all text views
          */
-
         final TextView monView = findViewById(R.id.monView);
         final TextView tuesView = findViewById(R.id.tuesView);
         final TextView wedView = findViewById(R.id.wedView);
@@ -122,6 +123,7 @@ public class homePage extends AppCompatActivity {
         final TextView friView = findViewById(R.id.friView);
         final TextView satView = findViewById(R.id.satView);
         final TextView sunView = findViewById(R.id.sunView);
+        //creates text view arrayList for easy referencing
         textViews = new ArrayList<>(Arrays.asList(monView,tuesView,wedView,thursView,friView,satView,sunView));
 
         /*
@@ -149,14 +151,13 @@ public class homePage extends AppCompatActivity {
         //creates taskList view and array adapter to put items into the task list
         final ListView taskListView = findViewById(R.id.taskListView);
 
+        //puts string array into adapter that feeds the strings into the list
         ArrayAdapter<String> adapter = new ArrayAdapter<>(taskListView.getContext(),android.R.layout.simple_list_item_1,taskNames);
         taskListView.setAdapter(adapter);
 
 
 
-
     }
-
 
 
     private void updateColors(ArrayList<TextView> textViews,ArrayList<Button> buttons) {
@@ -211,9 +212,7 @@ public class homePage extends AppCompatActivity {
             BufferedReader bufferedReader = new BufferedReader(isr);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                //removes everything up to the equals sign
-                String word = line.replaceFirst(".*=","");
-                settings.add(Integer.parseInt(word));
+                settings.add(Integer.parseInt(line));
             }
             return settings;
         }
