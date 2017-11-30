@@ -12,11 +12,13 @@ public class Calendar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
 
+        ImageButton settingButton = findViewById(R.id.settingsButton);
         ImageButton backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                setContentView(R.layout.activity_home_page);
+                finish();
             }
         });
+
     }
 }

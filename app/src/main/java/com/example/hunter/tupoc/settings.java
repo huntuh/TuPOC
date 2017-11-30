@@ -1,3 +1,4 @@
+
 package com.example.hunter.tupoc;
 
 import android.media.Image;
@@ -6,7 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import java.util.ArrayList;
+
 public class settings extends AppCompatActivity {
+
+    ArrayList<Integer> settings = getSettings();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,8 +21,18 @@ public class settings extends AppCompatActivity {
         ImageButton backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                setContentView(R.layout.activity_home_page);
+                saveData();
+                finish();
             }
         });
+    }
+
+    private void saveData() {
+
+    }
+
+    public ArrayList<Integer> getSettings() {
+
+        return settings;
     }
 }

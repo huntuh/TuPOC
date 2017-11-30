@@ -3,59 +3,37 @@ package com.example.hunter.tupoc;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.text.FieldPosition;
+import java.text.ParseException;
+import java.text.ParsePosition;
+import java.util.Date;
+import java.text.DateFormat;
+
 /**
  * Created by Hunter on 11/20/2017.
  */
 
-public class Task implements Parcelable{
+public class Task {
 
     private String taskName;
-    private String dueDate;
+    private Date dueDate;
     private int priority;
+    private DateFormat df;
 
-    public Task(String name, String date, String priority)
+    public Task(String name, String date, String priority) throws ParseException
     {
         taskName = name;
-        dueDate = date;
+        dueDate = df.parse(date);
         this.priority = Integer.parseInt(priority);
     }
 
-    protected Task(Parcel in) {
-        taskName = in.readString();
-        dueDate = in.readString();
-        priority = in.readInt();
-    }
-
-    public static final Creator<Task> CREATOR = new Creator<Task>() {
-        @Override
-        public Task createFromParcel(Parcel in) {
-            return new Task(in);
-        }
-
-        @Override
-        public Task[] newArray(int size) {
-            return new Task[size];
-        }
-    };
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(taskName);
-        parcel.writeString(dueDate);
-        parcel.writeInt(priority);
-    }
 
     public String getTaskName()
     {
         return taskName;
     }
 
-    public String getDueDate()
+    public Date getDueDate()
     {
         return dueDate;
     }

@@ -15,54 +15,43 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:background="@color/colorPrimary"
-        android:text="WEATHER"
+        android:background="@android:color/holo_blue_dark"
+        android:text="@string/WEATHER"
         app:layout_constraintEnd_toStartOf="@+id/settingsButton"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="WEATHER" />
 
     <ImageButton
         android:id="@+id/settingsButton"
+        style="@style/Widget.AppCompat.ImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        android:background="@color/colorPrimary"
+        android:background="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_preferences" />
-
-    <ListView
-        android:id="@+id/taskListView"
-        android:layout_width="0dp"
-        android:layout_height="327dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weatherButton" />
 
     <Button
         android:id="@+id/wedButton"
         android:layout_width="53dp"
         android:layout_height="61dp"
-        android:background="@color/colorPrimary"
-        android:text="SUN"
+        android:background="@color/yellow"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/thursButton"
-        app:layout_constraintEnd_toStartOf="@+id/thursButton" />
+        app:layout_constraintEnd_toStartOf="@+id/thursButton"
+        tools:text="WED" />
 
     <TextView
         android:id="@+id/tuesView"
         android:layout_width="53dp"
         android:layout_height="31dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/red"
         android:gravity="center_horizontal"
         android:hapticFeedbackEnabled="false"
-        android:text="0"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/tuesButton"
         app:layout_constraintEnd_toEndOf="@+id/tuesButton" />
@@ -71,23 +60,22 @@
         android:id="@+id/tuesButton"
         android:layout_width="53dp"
         android:layout_height="61dp"
-        android:background="@color/colorPrimary"
-        android:text="SUN"
+        android:background="@color/red"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/wedButton"
-        app:layout_constraintEnd_toStartOf="@+id/wedButton" />
+        app:layout_constraintEnd_toStartOf="@+id/wedButton"
+        tools:text="TUE" />
 
     <TextView
         android:id="@+id/sunView"
         android:layout_width="53dp"
         android:layout_height="31dp"
-        android:background="@color/colorPrimary"
+        android:background="@android:color/holo_blue_dark"
         android:gravity="center_horizontal"
         android:hapticFeedbackEnabled="false"
-        android:text="0"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/sunButton"
-        app:layout_constraintStart_toStartOf="@+id/sunButton" />
+        app:layout_constraintStart_toEndOf="@+id/satView" />
 
     <Button
         android:id="@+id/thursButton"
@@ -96,23 +84,20 @@
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="33dp"
-        android:background="@color/colorPrimary"
-        android:text="SUN"
+        android:background="@android:color/holo_blue_dark"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/taskListView" />
+        tools:text="THU" />
 
     <TextView
         android:id="@+id/wedView"
         android:layout_width="53dp"
         android:layout_height="31dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/yellow"
         android:gravity="center_horizontal"
         android:hapticFeedbackEnabled="false"
-        android:text="0"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/wedButton"
         app:layout_constraintEnd_toStartOf="@+id/thursButton" />
@@ -121,42 +106,41 @@
         android:id="@+id/satButton"
         android:layout_width="53dp"
         android:layout_height="61dp"
-        android:background="@color/colorPrimary"
-        android:text="SUN"
+        android:background="@android:color/holo_blue_dark"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/friButton"
-        app:layout_constraintStart_toEndOf="@+id/friButton" />
+        app:layout_constraintStart_toEndOf="@+id/friButton"
+        tools:text="SAT" />
 
     <TextView
         android:id="@+id/friView"
         android:layout_width="53dp"
         android:layout_height="31dp"
-        android:background="@color/colorPrimary"
+        android:background="@android:color/holo_blue_dark"
         android:gravity="center_horizontal"
         android:hapticFeedbackEnabled="false"
-        android:text="0"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/friButton"
-        app:layout_constraintStart_toStartOf="@+id/friButton" />
+        app:layout_constraintStart_toStartOf="@+id/friButton"
+        tools:text="3" />
 
     <Button
         android:id="@+id/friButton"
         android:layout_width="53dp"
         android:layout_height="61dp"
-        android:background="@color/colorPrimary"
-        android:text="SUN"
+        android:background="@android:color/holo_blue_dark"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/thursButton"
-        app:layout_constraintStart_toEndOf="@+id/thursButton" />
+        app:layout_constraintStart_toEndOf="@+id/thursButton"
+        tools:text="FRI" />
 
     <TextView
         android:id="@+id/thursView"
         android:layout_width="0dp"
         android:layout_height="31dp"
-        android:background="@color/colorPrimary"
+        android:background="@android:color/holo_blue_dark"
         android:gravity="center_horizontal"
         android:hapticFeedbackEnabled="false"
-        android:text="0"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/thursButton"
         app:layout_constraintEnd_toEndOf="@+id/thursButton"
@@ -166,45 +150,76 @@
         android:id="@+id/sunButton"
         android:layout_width="53dp"
         android:layout_height="61dp"
-        android:background="@color/colorPrimary"
-        android:text="SUN"
+        android:background="@android:color/holo_blue_dark"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/satButton"
-        app:layout_constraintStart_toEndOf="@+id/satButton" />
+        app:layout_constraintStart_toEndOf="@+id/satButton"
+        tools:text="SUN" />
 
     <Button
         android:id="@+id/monButton"
         android:layout_width="53dp"
         android:layout_height="61dp"
-        android:background="@color/colorPrimary"
-        android:text="SUN"
+        android:layout_marginStart="20dp"
+        android:background="@android:color/holo_blue_dark"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/tuesButton"
-        app:layout_constraintEnd_toStartOf="@+id/tuesButton" />
+        app:layout_constraintEnd_toStartOf="@+id/tuesButton"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="MON" />
 
     <TextView
         android:id="@+id/monView"
         android:layout_width="0dp"
         android:layout_height="31dp"
-        android:background="@color/colorPrimary"
+        android:background="@android:color/holo_blue_dark"
         android:gravity="center_horizontal"
         android:hapticFeedbackEnabled="false"
-        android:text="0"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/monButton"
         app:layout_constraintEnd_toEndOf="@+id/monButton"
-        app:layout_constraintStart_toStartOf="@+id/monButton" />
+        app:layout_constraintStart_toStartOf="@+id/monButton"
+        tools:text="3" />
 
     <TextView
         android:id="@+id/satView"
         android:layout_width="53dp"
         android:layout_height="31dp"
-        android:background="@color/colorPrimary"
+        android:background="@android:color/holo_blue_dark"
         android:gravity="center_horizontal"
         android:hapticFeedbackEnabled="false"
-        android:text="0"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/satButton"
         app:layout_constraintStart_toStartOf="@+id/satButton" />
+
+    <ListView
+        android:id="@+id/taskListView"
+        android:layout_width="0dp"
+        android:layout_height="352dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/thursView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tasksButton" />
+
+    <Button
+        android:id="@+id/tasksButton"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="@string/TASKS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherButton"
+        tools:text="TASKS" />
 
 </android.support.constraint.ConstraintLayout>
