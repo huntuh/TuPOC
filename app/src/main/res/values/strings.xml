@@ -5,6 +5,20 @@
     <string name="TASKS"></string>
     <string name="WEATHER"></string>
     <string name="CALENDER"></string>
+    <string name="MON">MON</string>
+    <string name="TUE">SUN</string>
+    <string name="WED">SUN</string>
+    <string name="THU">SUN</string>
+    <string name="FRI">SUN</string>
+    <string name="SAT">SUN</string>
+    <string name="SUN">SUN</string>
+    <string name="SETTINGS">SETTINGS</string>
+    <string name="_7">7</string>
+    <string name="_5">5</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_1">1</string>
+    <string name="_0">0</string>
     <string-array name="sort">
         <item>time</item>
         <item>priority</item>
